@@ -55,3 +55,19 @@ body {
 .hide {
     display: none;
 }
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.9rem;
+    font-weight: bold;
+    padding: 10px 20px;
+
+}
+
+p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
