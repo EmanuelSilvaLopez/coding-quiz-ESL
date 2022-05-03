@@ -5,31 +5,68 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./assets/css/style.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma-rtl.min.css">
+	<link rel="stylesheet" href="/assets/css/style.css">
 	<title>Coding Quiz</title>
 </head>
 
 <body>
 
-	<div class="container">
-		<h2 class="header">CODING QUIZ</h2>
-		<p id="quiz-rules">Try and answer all the questions before the time runs out! Any wrong answer will decrease the time available!</p>
-		<h2 id="countdown"></h2>
-		<div id="question-container" class="hide">
-			<div id="question">Question</div>
-			<div id="answer-buttons" class="btn-grid">
-				<button class="btn">Answer 1</button>
-				<button class="btn">Answer 2</button>
-				<button class="btn">Answer 3</button>
-				<button class="btn">Answer 4</button>
-			</div>
+
+	<section class="hero is-medium has-text-centered  is-link">
+		<div class="hero-body">
+			<p class="title has-text-weight-bold is-size-1">
+				QUIZ TIME
+			</p>
+			<p class="subtitle pt-4">
+				Answer questions before the timer ends!
+				<br>
+				If time runs up the quiz is over!
+			</p>
 		</div>
-		<div class="controls">
-			<button id="start-btn" class="start-btn btn">Start</button>
-			<button id="next-btn" class="next-btn btn hide">Next</button>
+	</section>
+
+	<section class="section has-text-centered is-hidden" id="quiz-container">
+
+		<div id="timer">Time left: </div>
+
+		<div id="questions">
+			<p>Questions Placeholder</p>
 		</div>
+
+		<button class="button" id="a" onclick="checkAnswer('a')">A</button>
+		<button class="button" id="b" onclick="checkAnswer('b')">B</button>
+		<button class="button" id="c" onclick="checkAnswer('c')">C</button>
+		<button class="button" id="d" onclick="checkAnswer('d')">D</button>
+
+		<div id="result"></div>
+
+	</section>
+
+	<div id="gameover">
+
+		<div id="finalScore"></div>
+		<input type="text" size="40" placeholder="Enter you initials for high score" name="intials" id="initials" />
+		<button id="submitScore">Submit Score</button>
+
 	</div>
 
+	<div id=rankContainer>
+
+		<div id="rankPage">
+			<div id="rankHeader">
+				<h3>Initials</h3>
+				<h3>Score</h3>
+			</div>
+			<div id="highscore-initials"></div>
+			<div id="highscore-score"></div>
+		</div>
+
+		<div id="endGameBtns">
+			<button id="playAgain" onclick="replayQuiz()">Play Again</button>
+		</div>
+
+	</div>
 
 	<script src="./assets/js/script.js"></script>
 </body>
