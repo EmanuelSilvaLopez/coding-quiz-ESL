@@ -1,4 +1,4 @@
-// Gathering HTML elements for manipulation
+// All HTML ELs
 var quizBody = document.getElementById("quiz-container");
 var resultsEl = document.getElementById("result");
 var finalScoreEl = document.getElementById("finalScore");
